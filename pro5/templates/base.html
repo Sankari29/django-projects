@@ -1,0 +1,24 @@
+<!-- templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style_sheet.css' %}">
+</head>
+<body>
+    <img src="static\images\logo.jpeg", alt="image" height="300">
+    {% include "partials/header.html" %}
+    {% include "partials/nav.html" %}
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    {% include "partials/footer.html" %}
+
+</body>
+</html>
+
