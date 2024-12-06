@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    {% if table %}
+    <h1 align="center">Table</h1>
+    <table align="center" border="solid" cellpadding="10px" cellspacing="0px">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Mobile No</th>
+            <th>Class</th>
+        </tr>
+        {% for i in table %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.mob}}</td>
+            <td>{{i.clas}}</td>
+        </tr>
+       {% endfor %}
+    </table>
+    {% else %}
+    <h3>Entered Mobile Number is Not Registered</h3>
+    {% endif %}
+</body>
+</html>
