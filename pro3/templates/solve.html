@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution</title>
+</head>
+<body>
+    <h1 align="center">Programs</h1>
+
+    {% if data == '1' %}
+        <h3>Program to check if the given number is Prime or not</h3>
+    {% elif data == '2' %}
+        <h3>Program to print n Fibonacci series</h3>
+    {% elif data == '3' %}
+        <h3>Program to check if the given number is Even or Odd</h3>
+    {% elif data == '4' %}
+        <h3>Program to check if the given number is a Perfect Square or not</h3>
+    {% elif data == '5' %}
+        <h3>Program to check if the given number is Palindrome or not</h3>
+    {% endif %}
+
+    <form action="">
+        <input type="hidden" value="{{ data }}" name="data">
+        <label for="val"><b>Enter a number:</b></label>
+        <input type="number" name="val" id="val" placeholder="{{ val }}">
+        <input type="submit" value="Submit">
+        <br><br>
+        <b>{{ res }}</b>
+    </form>
+
+    <a href="{% url 'home' %}"><button>Home</button></a>
+</body>
+</html>
