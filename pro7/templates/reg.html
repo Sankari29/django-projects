@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 align="center">Registration Form</h1>
+    <form action="" method="POSt">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{data.id}}">
+        <label for="name">Name</label> <input type="text" id="name" name="name" value="{{data.name}}"> <br>
+        <label for="age">Age</label> <input type="number" id="age" name="age" value="{{data.age}}"> <br>
+        <label for="phone">Phone</label> <input type="tel" id="phone" name="phone" value="{{data.phone}}"> <br>
+        <label for="clas">Class</label> <input type="text" id="clas" name="clas" value="{{data.clas}}"> <br>
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
