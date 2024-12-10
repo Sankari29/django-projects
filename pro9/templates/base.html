@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="{% static  'css/stylesheet1.css '%}">
+</head>
+<body> 
+  <img src="static/images/download.jpeg" alt="" height="100">   
+  {% include 'partials/header.html' %}
+  {% include 'partials/nav.html' %}
+
+  <main>
+    {%block content%}{%endblock%}
+  </main>
+
+</body>
+</html>

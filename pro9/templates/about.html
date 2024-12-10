@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block head %}
+
+<title>{%block title%}About{%endblock%}-mywebpage</title>
+
+{%endblock%}
+
+{%block page%}
+        <h2>About us</h2>
+        {%endblock%}
+
+{%block content%}<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente eos sed ex ullam, culpa consectetur odio. Quaerat consectetur maxime nesciunt?</p>
+{%endblock%}
+
+{%block footer%}
+&copy; Copyright 2008 by <a href="{% url 'about'%}">about</a>
+{%endblock%}

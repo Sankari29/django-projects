@@ -1,0 +1,13 @@
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    color: aliceblue;
+    font-size: medium;
+    background-color: antiquewhite;
+}
+
+a{
+    text-decoration: none;
+    margin: 10px;
+}
+
