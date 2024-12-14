@@ -1,0 +1,23 @@
+.data-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.customer-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.customer-section h3 {
+    margin-top: 0;
+}
+
+.customer-section h4 {
+    margin-bottom: 5px;
+}

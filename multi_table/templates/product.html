@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="{% static 'css\cus_pro.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'customer' %}">Create Customer</a>
+    <a href="{% url 'product' %}">Create Product</a>
+    <a href="{% url 'data' %}">Display Data</a>
+</div>
+
+<div class="form-container">
+    <h2>Create Product</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Save</button>
+    </form>
+</div>
+
+</body>
+</html>

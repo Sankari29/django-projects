@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer and Product Data</title>
+    <link rel="stylesheet" href="{% static 'css\cus_pro.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'customer' %}">Create Customer</a>
+    <a href="{% url 'product' %}">Create Product</a>
+    <a href="{% url 'data' %}">Display Data</a>
+</div>
+
+<div class="data-container">
+    <h2>Customer and Product Data</h2>
+    {% for customer in customers %}
+        <div class="customer-section">
+            <h3>{{ customer.first_name }} {{ customer.last_name }}</h3>
+            <p>Email: {{ customer.email }}</p>
+            <p>Phone: {{ customer.phone }}</p>
+            <p>Address: {{ customer.address }}</p>
+            <h4>Products:</h4>
+            <ul>
+                {% for product in customer.products.all %}
+                    <li>{{ product.name }} - ₹{{ product.price }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
